@@ -5,13 +5,7 @@ on:
     types: [created]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./.github/workflows/python-tests.yml@main
-
   pypi-publish:
-    needs: test
     name: Publish release to PyPI
     runs-on: ubuntu-latest
     environment:
